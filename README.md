@@ -1,2 +1,2 @@
 # SoftUni-ReactJS-Course
-SoftUni ReactJS Course Projects
+Projects part of the SoftUni ReactJS course
