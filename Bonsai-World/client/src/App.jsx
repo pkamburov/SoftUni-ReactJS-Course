@@ -4,7 +4,7 @@ import Login from "./components/Login"
 import Home from "./components/Home"
 import NotFound from "./components/NotFound"
 import Footer from "./components/Footer"
-import ForumPage from "./components/Forum"
+import Guides from "./components/Guides"
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/forum" element={<ForumPage />} />
+                <Route path="/guides" element={<Guides />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
 

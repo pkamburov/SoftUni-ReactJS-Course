@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {
     Dialog,
     DialogBackdrop,
@@ -41,6 +41,7 @@ const navigation = {
                 {
                     id: 'bonsai-care',
                     name: 'Bonsai tree care',
+                    href: '/bonsai-care',
                     items: [
                         { name: 'Placement', href: '/techniques/placement' },
                         { name: 'Watering', href: '/techniques/watering' },
@@ -53,6 +54,7 @@ const navigation = {
                 {
                     id: 'bonsai-styling',
                     name: 'Bonsai styling',
+                    href: '/bonsai-styling',
                     items: [
                         { name: 'Pruning', href: '#' },
                         { name: 'Wiring', href: '#' },
@@ -79,13 +81,15 @@ const navigation = {
                     href: '#',
                     imageSrc: './src/assets/carmona-bonsai.jpg',
                     imageAlt:
-                        'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+                        'Carmona Bonsai',
                 },
             ],
             sections: [
                 {
                     id: 'care-guides',
                     name: 'Care guides',
+                    href: '/guides',
+                    backgroundImg: "./src/assets/bonsai-species",
                     items: [
                         { name: 'Ficus Bonsai', href: '#' },
                         { name: 'Juniper Bonsai', href: '#' },
@@ -96,12 +100,13 @@ const navigation = {
                         { name: 'Pines', href: '#' },
                         { name: 'Azalea', href: '#' },
                         { name: 'Spruce', href: '#' },
-                        { name: 'Serissa', href: '#' },
+                        { name: 'All Guides', href: '/guides' },
                     ],
                 },
                 {
                     id: 'identification',
                     name: 'Identification',
+                    href: '/identification',
                     items: [
                         { name: 'Identify my Bonsai', href: '#' },
                         { name: 'Indoor Bonsai', href: '#' },
@@ -112,8 +117,8 @@ const navigation = {
         },
     ],
     pages: [
-        { name: 'Forum', href: '/forum' },
         { name: 'About us', href: '/about-us' },
+        { name: 'Contacts', href: '/contacts' },
     ],
 }
 
@@ -301,9 +306,12 @@ export default function Navigation() {
                                                             <div className="row-start-1 grid grid-cols-2 gap-x-8 gap-y-10 text-m">
                                                                 {category.sections.map((section) => (
                                                                     <div key={section.name}>
-                                                                        <p id={`${section.name}-heading`} className="font-medium text-gray-900">
+                                                                        {/* <p id={`${section.name}-heading`} className="font-medium text-gray-900">
                                                                             {section.name}
-                                                                        </p>
+                                                                        </p> */}
+                                                                        <Link to={section.href} className="font-medium text-gray-900">
+                                                                            {section.name}
+                                                                        </Link>
                                                                         <ul
                                                                             role="list"
                                                                             aria-labelledby={`${section.name}-heading`}
