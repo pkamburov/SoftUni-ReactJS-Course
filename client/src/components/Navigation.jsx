@@ -111,7 +111,7 @@ export default function Navigation() {
                                         <Link
                                             key={page.name}
                                             to={page.href}
-                                            className="flex items-center text-m font-medium text-gray-600 hover:text-gray-800"
+                                            className="flex items-center text-m font-medium text-gray-600 hover:text-gray-800 border-b-2 border-transparent focus:border-emerald-600"
                                         >
                                             {page.name}
                                         </Link>
