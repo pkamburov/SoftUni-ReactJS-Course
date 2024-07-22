@@ -3,6 +3,8 @@ import * as bonsaiAPI from '../api/bonsai-api';
 
 import CtaSection from "./CtaSection";
 import HeroSection from "./HeroSection";
+import FeaturedPages from "./FeaturedPages";
+import RecentlyAdded from "./RecentlyAdded";
 
 export default function Home() {
     const [page, setPage] = useState([]);
@@ -18,6 +20,8 @@ export default function Home() {
                 page={page}
             />
             <CtaSection />
+            <FeaturedPages />
+            <RecentlyAdded />
         </>
     )
 }

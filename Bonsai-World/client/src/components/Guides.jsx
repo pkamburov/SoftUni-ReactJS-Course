@@ -8,15 +8,13 @@ export default function Guides() {
     const [page, setPage] = useState([]);
 
     useEffect(() => {
-        bonsaiAPI.getPage('guides')
+        bonsaiAPI.getPage('tree-species')
             .then(result => setPage(result));
     }, []);
 
     return (
         <>
-            <HeroSection 
-                page={page}
-            />
+            <HeroSection page={page} />
             <FeaturedSection />
             <div>
                 <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-8">Find your tree species</h2>

@@ -12,13 +12,11 @@ export default function HeroSection({page}) {
             <div className="mx-auto max-w-7xl sm:px-6 sm:py-2 lg:px-2 z-20">
                 <div className="relative isolate overflow-hidden bg-white px-6 pt-16 sm:rounded-3xl sm:px-6 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-20 lg:text-left">
-                        <h2 className="font-normal tracking-tight text-gray-800 lg:text-7xl sm:text-4xl font-hero">
+                        <h2 className="font-normal tracking-tight text-light-gray lg:text-7xl sm:text-4xl font-hero">
                             {page.title} 
-                            {/* The living art of Bonsai */}
                         </h2>
                         <p className="mt-6 text-lg leading-8 text-gray-700">
                             {page.subtitle} 
-                            {/* Bonsai Empire is a community built by enthusiasts and experts from around the world. We introduce you to the fascinating and living art of Bonsai, and help you get started! */}
                         </p>
                     </div>
                 </div>
